@@ -1,0 +1,80 @@
+/***************
+-----HEADER-----
+****************/
+
+@import "variables";
+
+header{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $gradiente-header1;
+    background-image: linear-gradient(315deg, $gradiente-header1 10%, $gradiente-header2 74%);
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .logo {
+            display: block;
+            width: fit-content;
+            text-align: center;
+            img{
+                display: block;
+                margin: 0 auto;
+                width: $logo-header;
+                height: $logo-header;
+                width: fit-content;
+            }
+        }
+        h1{
+            color: $blanco1;
+            margin: 0.2rem auto;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            padding: 0 auto;
+            text-shadow: 2px 2px 2px rgb(21, 21, 22);
+        }
+        nav{
+            .nav-ul{
+                width: 100%; 
+                margin: auto;
+                padding: 0 8rem;
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                .item-navegacion {
+                    display: block;
+                    color: $blanco1;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    height: 100%;
+                    text-align: center;
+                    padding: 0.5rem 0.8rem;
+                    margin: 0.4rem auto;
+                    border-radius: 1rem;
+                    cursor: pointer;
+                    transition: all 0.8s;
+                        &:hover{
+                        background-color: $blanco1;
+                        color: $gris1;
+                        font-weight: bold;
+                        font-size: 0.95rem;
+                        text-decoration:$gris1;
+                        transition: all 0.8s;
+                        padding: 0.5rem 0.8rem;
+                        border-radius: 1.3rem;
+                        }
+                }
+            }
+        }
+    }
+}   
+

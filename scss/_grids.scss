@@ -1,0 +1,128 @@
+/***************
+-----GRILLAS-----
+****************/
+
+.body-areas{
+    display: grid;
+    grid-template-areas:
+    "cabeza"
+    "cuerpo"
+    "pie"
+    ;
+    grid-template-rows: auto auto 15rem;
+    /*Nombre areas footer*/
+    header{
+    grid-area: cabeza;
+    }
+    main{
+    grid-area: cuerpo;
+    }
+    footer{
+    grid-area: pie;
+    }
+}
+
+.conteiner-conocenos{
+    display: grid;
+    grid-template-areas:
+    "quienes-somos quienes-somos quienes-somos"
+    "mision media vision"
+    "valores valores valores"
+    ;
+    grid-template-columns: repeat (1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+    gap: 1rem;
+    margin: auto 1rem;
+    height: fit-content;
+    /*Nombre Areas Conocenos*/
+    .quienes-somos{
+        grid-area: quienes-somos;
+    }
+    .mision{
+        grid-area: mision;
+    }
+    .media-conocenos{
+        grid-area: media;
+    }
+    .vision{
+        grid-area: vision;
+    }
+    .valores{
+        grid-area: valores;
+    }
+}
+
+/*Formulario*/
+fieldset{
+    font-size: 0.9rem;
+    display: grid;
+    grid-template-areas: 
+    "nombre apellido"
+    "correo telefono"
+    "localidad localidad"
+    "asunto asunto"
+    "mensaje mensaje"
+    "enviar enviar"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+    gap: 1rem;
+
+    /*Nombre Areas Formulario*/
+    .nombre-grid{
+        grid-area: nombre;
+    }
+    .apellido-grid{
+        grid-area: apellido;
+    }
+    .correo-grid{
+        grid-area: correo;
+    }
+    .telefono-grid{
+        grid-area: telefono;
+    }
+    .localidad-grid{
+        grid-area: localidad;
+    }
+    .asunto-grid{
+        grid-area: asunto;
+    }
+    .mensaje-grid{
+        grid-area: mensaje;
+    }
+    .enviar-grid{
+        grid-area: enviar;
+    }
+}
+
+/*-----FOOTER-----*/
+
+footer{
+    display: grid;
+    grid-template-areas: 
+    "logo-footer links-footer contacto-footer redes-footer"
+    "copyright-footer copyright-footer copyright-footer copyright-footer"
+    ;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 1rem;
+    padding-top: 2rem;
+    background-color:rgb(36, 39, 41);
+    
+    /*Nombre areas footer*/
+    .logo-footer{
+        grid-area: logo-footer; 
+    }
+    .links-footer{
+        grid-area: links-footer;
+    }
+    .contacto-footer{
+        grid-area: contacto-footer;
+    }
+    .redes-footer{
+        grid-area: redes-footer;
+    }
+    .copyright-footer{
+        grid-area: copyright-footer;
+    }
+}

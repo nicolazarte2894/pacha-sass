@@ -1,0 +1,64 @@
+/**************
+-----INDEX-----
+***************/
+@import "variables";
+.main-index{
+    background-image: url("../assets/img/barras1.jpg");
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    p{
+        padding: 2rem 5rem;
+        text-align: center;
+    }
+    .carrusel{
+        width: 100%;
+        height: 30rem;
+        padding: 5rem auto;
+        display: flex;
+        align-items: center;
+        background-color:$blanco2;
+        // box-shadow: 0px 2px 10px rgb(36, 39, 41, 0.3);
+        div{
+            width: 100%;
+            height: 95%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+            
+        }
+    }
+    .nosotros-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        margin: auto;
+        div{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: auto;
+            height: 20rem;
+        }
+        p{
+            color: $gris1;
+            font-weight: bold;
+            height: 100%;
+        }
+    }
+}

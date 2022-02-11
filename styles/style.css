@@ -1,0 +1,491 @@
+@charset "UTF-8";
+/***************
+------BODY------
+****************/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: white;
+  font-size: 16px; }
+
+/*Variables del proyecto*/
+/***************
+-----RESET-----
+****************/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none; }
+
+/***************
+-----GRILLAS-----
+****************/
+.body-areas {
+  display: grid;
+  grid-template-areas: "cabeza"
+ "cuerpo"
+ "pie";
+  grid-template-rows: auto auto 15rem;
+  /*Nombre areas footer*/ }
+  .body-areas header {
+    grid-area: cabeza; }
+  .body-areas main {
+    grid-area: cuerpo; }
+  .body-areas footer {
+    grid-area: pie; }
+
+.conteiner-conocenos {
+  display: grid;
+  grid-template-areas: "quienes-somos quienes-somos quienes-somos"
+ "mision media vision"
+ "valores valores valores";
+  grid-template-columns: repeat 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 1rem;
+  margin: auto 1rem;
+  height: fit-content;
+  /*Nombre Areas Conocenos*/ }
+  .conteiner-conocenos .quienes-somos {
+    grid-area: quienes-somos; }
+  .conteiner-conocenos .mision {
+    grid-area: mision; }
+  .conteiner-conocenos .media-conocenos {
+    grid-area: media; }
+  .conteiner-conocenos .vision {
+    grid-area: vision; }
+  .conteiner-conocenos .valores {
+    grid-area: valores; }
+
+/*Formulario*/
+fieldset {
+  font-size: 0.9rem;
+  display: grid;
+  grid-template-areas: "nombre apellido"
+ "correo telefono"
+ "localidad localidad"
+ "asunto asunto"
+ "mensaje mensaje"
+ "enviar enviar";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+  gap: 1rem;
+  /*Nombre Areas Formulario*/ }
+  fieldset .nombre-grid {
+    grid-area: nombre; }
+  fieldset .apellido-grid {
+    grid-area: apellido; }
+  fieldset .correo-grid {
+    grid-area: correo; }
+  fieldset .telefono-grid {
+    grid-area: telefono; }
+  fieldset .localidad-grid {
+    grid-area: localidad; }
+  fieldset .asunto-grid {
+    grid-area: asunto; }
+  fieldset .mensaje-grid {
+    grid-area: mensaje; }
+  fieldset .enviar-grid {
+    grid-area: enviar; }
+
+/*-----FOOTER-----*/
+footer {
+  display: grid;
+  grid-template-areas: "logo-footer links-footer contacto-footer redes-footer"
+ "copyright-footer copyright-footer copyright-footer copyright-footer";
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  gap: 1rem;
+  padding-top: 2rem;
+  background-color: #242729;
+  /*Nombre areas footer*/ }
+  footer .logo-footer {
+    grid-area: logo-footer; }
+  footer .links-footer {
+    grid-area: links-footer; }
+  footer .contacto-footer {
+    grid-area: contacto-footer; }
+  footer .redes-footer {
+    grid-area: redes-footer; }
+  footer .copyright-footer {
+    grid-area: copyright-footer; }
+
+/***************
+-----HEADER-----
+****************/
+/*Variables del proyecto*/
+header {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #bc6f03;
+  background-image: linear-gradient(315deg, #bc6f03 10%, #874000 74%); }
+  header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+    header div .logo {
+      display: block;
+      width: fit-content;
+      text-align: center; }
+      header div .logo img {
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+        width: fit-content; }
+    header div h1 {
+      color: white;
+      margin: 0.2rem auto;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      padding: 0 auto;
+      text-shadow: 2px 2px 2px #151516; }
+    header div nav .nav-ul {
+      width: 100%;
+      margin: auto;
+      padding: 0 8rem;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      header div nav .nav-ul .item-navegacion {
+        display: block;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        height: 100%;
+        text-align: center;
+        padding: 0.5rem 0.8rem;
+        margin: 0.4rem auto;
+        border-radius: 1rem;
+        cursor: pointer;
+        transition: all 0.8s; }
+        header div nav .nav-ul .item-navegacion:hover {
+          background-color: white;
+          color: #242729;
+          font-weight: bold;
+          font-size: 0.95rem;
+          text-decoration: #242729;
+          transition: all 0.8s;
+          padding: 0.5rem 0.8rem;
+          border-radius: 1.3rem; }
+
+/*************
+-----MAIN-----
+**************/
+/*Variables del proyecto*/
+main {
+  padding-bottom: 2rem;
+  /*Animaciones*/ }
+  main .titulo-principal {
+    width: 100%;
+    height: 7rem;
+    background-color: #f0e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #bd5816;
+    font-style: italic;
+    font-size: large;
+    margin-bottom: 2rem; }
+  main .titulos {
+    width: 100%;
+    height: 5rem;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    text-transform: uppercase; }
+  main h3 {
+    text-align: center; }
+  main a img {
+    vertical-align: middle; }
+  main .titulo-animado {
+    animation-name: titulo-animado;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    animation-delay: 0s; }
+
+@keyframes titulo-animado {
+  from {
+    transform: translateY(-40px);
+    opacity: 0%;
+    font-size: 0rem; }
+  to {
+    transform: translateY(0);
+    opacity: 100%; } }
+
+/**************
+-----INDEX-----
+***************/
+/*Variables del proyecto*/
+.main-index {
+  background-image: url("../assets/img/barras1.jpg");
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+  .main-index p {
+    padding: 2rem 5rem;
+    text-align: center; }
+  .main-index .carrusel {
+    width: 100%;
+    height: 30rem;
+    padding: 5rem auto;
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke; }
+    .main-index .carrusel div {
+      width: 100%;
+      height: 95%; }
+      .main-index .carrusel div img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center; }
+  .main-index .nosotros-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: auto; }
+    .main-index .nosotros-flex div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .main-index .nosotros-flex img {
+      width: auto;
+      height: 20rem; }
+    .main-index .nosotros-flex p {
+      color: #242729;
+      font-weight: bold;
+      height: 100%; }
+
+/***************
+-----FOOTER-----
+****************/
+/*Variables del proyecto*/
+footer {
+  background-color: #485461;
+  background-image: linear-gradient(200deg, #485461 10%, #1e2329 70%); }
+  footer .logo-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  footer .box-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: space-between; }
+  footer .title-footer {
+    font-size: 1.15rem;
+    color: white;
+    text-decoration: underline;
+    margin-bottom: 0.5rem; }
+  footer .text-footer {
+    font-size: 0.9rem;
+    color: #dde2e6;
+    text-decoration: none; }
+    footer .text-footer:hover {
+      text-decoration: underline; }
+  footer .icon-footer {
+    width: 20px;
+    height: 20px; }
+  footer .redes-footer a {
+    display: inline-block; }
+  footer .copyright-footer {
+    background-color: #151516;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+  footer a img {
+    vertical-align: middle; }
+  footer .mobile-footer {
+    display: none; }
+
+/*******************
+-----RESPONSIVE-----
+********************/
+/*Variables del proyecto*/
+/********VERSIÓN TABLET (width entre 576 y 1023px)*********/
+@media (min-width: 576px) and (max-width: 1023px) {
+  /*-----HEADER-----*/
+  header .nav-ul {
+    padding: 0;
+    margin: auto; }
+    header .nav-ul .item-navegacion {
+      padding: 0.5rem 0.1rem;
+      margin: 0.4rem auto; }
+  /*-----HTML CONOCENOS-----*/
+  .conteiner-conocenos {
+    display: grid;
+    grid-template-areas: "quienes-somos quienes-somos"
+ "media media"
+ "mision vision"
+ "valores valores ";
+    grid-template-columns: repeat 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    margin: auto 1rem;
+    height: fit-content; }
+  /*-----PRODUCTOS HTML-----*/
+  .barra-productos {
+    display: flex;
+    flex-direction: column; }
+  /*-----CONTACTO HTML-----*/
+  .conteiner-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    text-align: center; }
+  fieldset {
+    font-size: 0.9rem;
+    display: grid;
+    grid-template-areas: "nombre"
+ "apellido"
+ "correo"
+ "telefono"
+ "localidad"
+ "asunto"
+ "mensaje"
+ "enviar";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
+    gap: 1rem; }
+  /*-----FOOTER-----*/
+  footer {
+    display: grid;
+    grid-template-areas: "logo-footer contacto-footer"
+ "logo-footer redes-footer "
+ "copyright-footer copyright-footer";
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    padding-top: 1rem;
+    background-color: #242729; }
+    footer .box-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.85rem; }
+    footer .links-footer {
+      display: none; } }
+
+/********VERSIÓN MOBILE (width<575px)*********/
+@media (max-width: 575px) {
+  /*-----HEADER-----*/
+  .body-areas {
+    display: grid;
+    grid-template-areas: "cabeza"
+ "cuerpo"
+ "pie";
+    grid-template-rows: auto auto 8rem; }
+  body {
+    font-size: 12px; }
+  header h1 {
+    display: none; }
+  .item-navegacion {
+    font-size: 0.8rem;
+    margin: auto;
+    margin: 0.4rem 0; }
+    .item-navegacion:hover {
+      font-size: 0.85rem; }
+  .nosotros-flex {
+    display: flex;
+    flex-direction: column; }
+  /*-----MAIN-----*/
+  main .titulo-principal {
+    width: 100%;
+    height: 5rem; }
+  main .titulos {
+    width: 100%;
+    height: 3rem; }
+  main h2 {
+    font-size: 2rem; }
+  /*-----HTML CONOCENOS-----*/
+  .conteiner-conocenos {
+    display: grid;
+    grid-template-areas: "quienes-somos quienes-somos"
+ "media media"
+ "mision vision"
+ "valores valores ";
+    grid-template-columns: repeat 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    margin: auto 1rem;
+    height: fit-content; }
+  /*-----HTML PRODUCTOS-----*/
+  .barra-productos {
+    display: flex;
+    flex-direction: column; }
+  /*-----CONTACTO HTML-----*/
+  .conteiner-contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    text-align: center; }
+  fieldset {
+    font-size: 0.9rem;
+    display: grid;
+    grid-template-areas: "nombre"
+ "apellido"
+ "correo"
+ "telefono"
+ "localidad"
+ "asunto"
+ "mensaje"
+ "enviar";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
+    gap: 1rem; }
+  /*-----FOOTER-----*/
+  footer {
+    display: grid;
+    grid-template-areas: "logo-footer mobile-footer"
+ "copyright-footer  copyright-footer ";
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    background-color: #242729; }
+    footer .links-footer {
+      display: none; }
+    footer .contacto-footer {
+      display: none; }
+    footer .redes-footer {
+      display: none; }
+    footer .mobile-footer {
+      display: block; }
+    footer .logo-footer a img {
+      width: 70px;
+      height: 70px; }
+    footer .mobile-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    footer .mobile-footer .icon-footer {
+      width: 30px;
+      height: 30px;
+      margin: 0 1rem;
+      vertical-align: middle; } }

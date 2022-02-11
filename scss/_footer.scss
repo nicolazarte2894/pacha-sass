@@ -1,0 +1,60 @@
+/***************
+-----FOOTER-----
+****************/
+
+@import "variables";
+
+footer{
+    background-color: $gradiente-footer1;
+    background-image: linear-gradient(200deg, $gradiente-footer1 10%, $gradiente-footer2 70%);
+    .logo-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: space-between;
+    }
+    .title-footer{
+        font-size: 1.15rem;
+        color: $blanco1;
+        text-decoration: underline;
+        margin-bottom: 0.5rem;
+    }
+    .text-footer{
+        font-size: 0.9rem;  
+        color: $gris2;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .icon-footer{
+        width: 20px;
+        height: 20px;
+    }
+    .redes-footer{
+        a{display: inline-block;
+        }
+    }  
+    .copyright-footer{
+        background-color:$copy-footer;
+        color: $blanco2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    a{
+        img{
+            vertical-align: middle;
+        }
+    }
+    .mobile-footer{
+        display: none;
+    }
+}

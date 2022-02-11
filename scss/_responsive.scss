@@ -1,0 +1,222 @@
+/*******************
+-----RESPONSIVE-----
+********************/
+@import "variables";
+
+/********VERSIÓN TABLET (width entre 576 y 1023px)*********/
+@media (min-width: 576px) and (max-width:1023px){
+
+    /*-----HEADER-----*/
+    header{
+        .nav-ul{
+            padding: 0;
+            margin:auto;
+            .item-navegacion{
+                padding: 0.5rem 0.1rem;
+                margin: 0.4rem auto;
+            }
+        }
+    }
+    /*-----HTML CONOCENOS-----*/
+    .conteiner-conocenos{
+        display: grid;
+        grid-template-areas:
+        "quienes-somos quienes-somos"
+        "media media"
+        "mision vision"
+        "valores valores "
+        ;
+        grid-template-columns: repeat (1fr);
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+        margin: auto 1rem;
+        height: fit-content;
+    }
+    /*-----PRODUCTOS HTML-----*/
+    .barra-productos{
+        display: flex;
+        flex-direction: column;
+    }
+    /*-----CONTACTO HTML-----*/
+    .conteiner-contacto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        text-align: center;
+    }
+    fieldset{
+        font-size: 0.9rem;
+        display: grid;
+        grid-template-areas: 
+        "nombre"
+        "apellido"
+        "correo"
+        "telefono"
+        "localidad"
+        "asunto"
+        "mensaje"
+        "enviar"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
+        gap: 1rem;
+    }
+    
+    /*-----FOOTER-----*/
+    footer{
+        display: grid;
+        grid-template-areas: 
+        "logo-footer contacto-footer"
+        "logo-footer redes-footer "
+        "copyright-footer copyright-footer"
+        ;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        padding-top: 1rem;
+        background-color:rgb(36, 39, 41);
+    
+    .box-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.85rem;
+    }
+    .links-footer{
+        display: none;
+    }
+    }
+}
+
+/********VERSIÓN MOBILE (width<575px)*********/
+@media (max-width: 575px){
+    /*-----HEADER-----*/
+    .body-areas{
+        display: grid;
+        grid-template-areas:
+        "cabeza"
+        "cuerpo"
+        "pie"
+        ;
+        grid-template-rows: auto auto 8rem;
+    }
+    body{
+        font-size: 12px;
+    }
+    header {
+        h1{
+            display: none;
+        }
+    }
+    .item-navegacion{
+        font-size: 0.8rem;
+        margin: auto;
+        margin: 0.4rem 0;
+        &:hover{
+            font-size: 0.85rem;
+        }
+    }
+    .nosotros-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    /*-----MAIN-----*/ 
+    main{
+        .titulo-principal{
+            width: 100%;
+            height: 5rem;
+        }
+        .titulos{
+            width: 100%;
+            height: 3rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+    }
+    
+    /*-----HTML CONOCENOS-----*/
+    .conteiner-conocenos{
+        display: grid;
+        grid-template-areas:
+        "quienes-somos quienes-somos"
+        "media media"
+        "mision vision"
+        "valores valores "
+        ;
+        grid-template-columns: repeat (1fr);
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+        margin: auto 1rem;
+        height: fit-content;
+        }
+    /*-----HTML PRODUCTOS-----*/
+    .barra-productos{
+    display: flex;
+    flex-direction: column;
+    }
+    /*-----CONTACTO HTML-----*/
+    .conteiner-contacto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        text-align: center;
+    }
+    fieldset{
+        font-size: 0.9rem;
+        display: grid;
+        grid-template-areas: 
+        "nombre"
+        "apellido"
+        "correo"
+        "telefono"
+        "localidad"
+        "asunto"
+        "mensaje"
+        "enviar"
+        ;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
+        gap: 1rem;
+    }
+    /*-----FOOTER-----*/
+    footer{
+        display: grid;
+        grid-template-areas: 
+        "logo-footer mobile-footer"
+        "copyright-footer  copyright-footer "
+        ;
+        grid-template-columns: 1.2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 0.5rem;
+        padding-top: 0.5rem;
+        background-color:rgb(36, 39, 41);
+        
+        .links-footer{
+            display: none;
+        }
+        .contacto-footer{
+        display: none;
+        }
+        .redes-footer{
+            display: none;
+        }
+        .mobile-footer{
+            display: block;
+        }
+        .logo-footer a img{
+            width: 70px;
+            height: 70px;
+        }
+        .mobile-footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mobile-footer .icon-footer{
+            width: 30px;
+            height: 30px;
+            margin: 0 1rem;
+            vertical-align: middle;
+        }
+    }
+}
