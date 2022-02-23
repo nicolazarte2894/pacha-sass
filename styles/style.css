@@ -2,6 +2,7 @@
 /***************
 ------BODY------
 ****************/
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -24,10 +25,8 @@ body {
 ****************/
 .body-areas {
   display: grid;
-  grid-template-areas: "cabeza"
- "cuerpo"
- "pie";
-  grid-template-rows: auto auto 15rem;
+  grid-template-areas: "cabeza" "cuerpo" "pie";
+  grid-template-rows: auto auto 18rem;
   /*Nombre areas footer*/ }
   .body-areas header {
     grid-area: cabeza; }
@@ -38,9 +37,7 @@ body {
 
 .conteiner-conocenos {
   display: grid;
-  grid-template-areas: "quienes-somos quienes-somos quienes-somos"
- "mision media vision"
- "valores valores valores";
+  grid-template-areas: "quienes-somos quienes-somos quienes-somos" "mision media vision" "valores valores valores";
   grid-template-columns: repeat 1fr;
   grid-template-rows: 1fr 2fr 1fr;
   gap: 1rem;
@@ -58,46 +55,41 @@ body {
   .conteiner-conocenos .valores {
     grid-area: valores; }
 
-/*Formulario*/
-fieldset {
-  font-size: 0.9rem;
-  display: grid;
-  grid-template-areas: "nombre apellido"
- "correo telefono"
- "localidad localidad"
- "asunto asunto"
- "mensaje mensaje"
- "enviar enviar";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
-  gap: 1rem;
-  /*Nombre Areas Formulario*/ }
-  fieldset .nombre-grid {
-    grid-area: nombre; }
-  fieldset .apellido-grid {
-    grid-area: apellido; }
-  fieldset .correo-grid {
-    grid-area: correo; }
-  fieldset .telefono-grid {
-    grid-area: telefono; }
-  fieldset .localidad-grid {
-    grid-area: localidad; }
-  fieldset .asunto-grid {
-    grid-area: asunto; }
-  fieldset .mensaje-grid {
-    grid-area: mensaje; }
-  fieldset .enviar-grid {
-    grid-area: enviar; }
+.conteiner-contacto {
+  /*Formulario*/ }
+  .conteiner-contacto fieldset {
+    font-size: 0.9rem;
+    display: grid;
+    grid-template-areas: "nombre apellido" "correo telefono" "localidad localidad" "asunto asunto" "mensaje mensaje" "enviar enviar";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+    gap: 1rem;
+    /*Nombre Areas Formulario*/ }
+    .conteiner-contacto fieldset .nombre-grid {
+      grid-area: nombre; }
+    .conteiner-contacto fieldset .apellido-grid {
+      grid-area: apellido; }
+    .conteiner-contacto fieldset .correo-grid {
+      grid-area: correo; }
+    .conteiner-contacto fieldset .telefono-grid {
+      grid-area: telefono; }
+    .conteiner-contacto fieldset .localidad-grid {
+      grid-area: localidad; }
+    .conteiner-contacto fieldset .asunto-grid {
+      grid-area: asunto; }
+    .conteiner-contacto fieldset .mensaje-grid {
+      grid-area: mensaje; }
+    .conteiner-contacto fieldset .enviar-grid {
+      grid-area: enviar; }
 
 /*-----FOOTER-----*/
 footer {
   display: grid;
-  grid-template-areas: "logo-footer links-footer contacto-footer redes-footer"
- "copyright-footer copyright-footer copyright-footer copyright-footer";
+  grid-template-areas: "logo-footer links-footer contacto-footer redes-footer" "copyright-footer copyright-footer copyright-footer copyright-footer";
   grid-template-columns: 1.2fr 1fr 1fr 1fr;
   grid-template-rows: 2fr 1fr;
-  gap: 1rem;
-  padding-top: 2rem;
+  row-gap: 2rem;
+  padding-top: 1rem;
   background-color: #242729;
   /*Nombre areas footer*/ }
   footer .logo-footer {
@@ -134,29 +126,25 @@ header {
     header div .logo {
       display: block;
       width: fit-content;
-      text-align: center; }
+      text-align: center;
+      margin: 1rem 0; }
       header div .logo img {
         display: block;
         margin: 0 auto;
         width: 100px;
         height: 100px;
         width: fit-content; }
-    header div h1 {
-      color: white;
-      margin: 0.2rem auto;
-      text-transform: uppercase;
-      font-size: 1.1rem;
-      padding: 0 auto;
-      text-shadow: 2px 2px 2px #151516; }
-    header div nav .nav-ul {
+  header nav {
+    background-color: #242729; }
+    header nav .nav-ul {
       width: 100%;
       margin: auto;
-      padding: 0 8rem;
+      padding: 0 1rem;
       list-style: none;
       display: flex;
       justify-content: space-around;
       align-items: center; }
-      header div nav .nav-ul .item-navegacion {
+      header nav .nav-ul .item-navegacion {
         display: block;
         color: white;
         text-transform: uppercase;
@@ -169,7 +157,7 @@ header {
         border-radius: 1rem;
         cursor: pointer;
         transition: all 0.8s; }
-        header div nav .nav-ul .item-navegacion:hover {
+        header nav .nav-ul .item-navegacion:hover {
           background-color: white;
           color: #242729;
           font-weight: bold;
@@ -186,6 +174,9 @@ header {
 main {
   padding-bottom: 2rem;
   /*Animaciones*/ }
+  main p {
+    padding: 2rem 5rem;
+    text-align: center; }
   main .titulo-principal {
     width: 100%;
     height: 7rem;
@@ -242,9 +233,6 @@ main {
   flex-direction: column;
   justify-content: center;
   text-align: center; }
-  .main-index p {
-    padding: 2rem 5rem;
-    text-align: center; }
   .main-index .carrusel {
     width: 100%;
     height: 30rem;
@@ -280,13 +268,192 @@ main {
       font-weight: bold;
       height: 100%; }
 
+/**************
+---CONOCENOS---
+***************/
+/*Variables del proyecto*/
+.conteiner-conocenos .quienes-somos, .conteiner-conocenos .mision, .conteiner-conocenos .vision, .conteiner-conocenos .valores, .conteiner-conocenos .media-conocenos {
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #dde2e6; }
+
+.conteiner-conocenos .media-conocenos {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .conteiner-conocenos .media-conocenos img {
+    height: 17rem;
+    border-radius: 0.8rem; }
+  .conteiner-conocenos .media-conocenos .valores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .conteiner-conocenos .media-conocenos .valores div {
+      width: 100%;
+      text-align: center; }
+
+.contacto-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  /*Mapa iframe*/ }
+  .contacto-main .mapa iframe {
+    width: 100%;
+    height: 20rem; }
+
+/**************
+---PRODUCTOS---
+***************/
+/*Variables del proyecto*/
+.container-barras {
+  background-image: url(../assets/img/barras2.jpg);
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .container-barras h4 {
+    font-size: xx-large;
+    color: whitesmoke; }
+
+.container-granola {
+  background-image: url(../assets/img/granola.jpg);
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .container-granola h4 {
+    font-size: xx-large;
+    color: whitesmoke; }
+  .container-granola p {
+    font-size: large;
+    color: whitesmoke; }
+
+.card {
+  transition: all 0.5s; }
+  .card:hover {
+    transform: translateX(2px);
+    transform: translateY(2px);
+    transition: all 0.5s; }
+
+/****************
+---ALIMENTACION---
+*****************/
+/*Variables del proyecto*/
+.media-alimentacion {
+  text-align: center;
+  height: 15rem;
+  background-color: #e4dede; }
+
+.tips {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content; }
+  .tips div {
+    height: 8rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #dde2e6;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+/******************
+---INSTITUCIONAL---
+******************/
+/*Variables del proyecto*/
+/***************
+----CONTACTO----
+****************/
+/*Variables del proyecto*/
+.contacto-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  /*Mapa iframe*/ }
+  .contacto-main a {
+    text-decoration: none;
+    list-style: none;
+    color: #242729;
+    cursor: pointer; }
+    .contacto-main a img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer; }
+  .contacto-main .mapa iframe {
+    width: 100%;
+    height: 20rem; }
+
+fieldset {
+  padding: 2rem;
+  margin: 1rem 3rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #dde2e6; }
+  fieldset legend {
+    width: 15rem;
+    border: none;
+    border-radius: 8px;
+    height: 2.5rem;
+    background-color: #242729;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  fieldset div {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    fieldset div label {
+      width: 20%; }
+  fieldset input, fieldset select, fieldset textarea {
+    border-radius: 5px;
+    border: 1px solid #242729;
+    height: 2.5rem;
+    width: 100%; }
+  fieldset .asunto-grid select {
+    height: 4rem; }
+  fieldset .mensaje-grid textarea {
+    height: 8rem;
+    width: 100%; }
+  fieldset .enviar-grid {
+    width: 100%;
+    height: fit-content; }
+    fieldset .enviar-grid input {
+      width: 4rem;
+      border: none;
+      border-radius: 8px;
+      height: 3rem;
+      background-color: #e24747;
+      color: whitesmoke;
+      font-weight: bold;
+      width: 5rem;
+      cursor: pointer; }
+      fieldset .enviar-grid input:hover {
+        background-color: #df2525; }
+
 /***************
 -----FOOTER-----
 ****************/
 /*Variables del proyecto*/
 footer {
-  background-color: #485461;
-  background-image: linear-gradient(200deg, #485461 10%, #1e2329 70%); }
+  background-color: #bf947d; }
   footer .logo-footer {
     display: flex;
     justify-content: center;
@@ -296,7 +463,8 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    align-content: space-between; }
+    align-content: space-between;
+    padding-top: 1rem; }
   footer .title-footer {
     font-size: 1.15rem;
     color: white;
@@ -319,6 +487,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 100%; }
   footer a img {
     vertical-align: middle; }
@@ -332,19 +501,21 @@ footer {
 /********VERSIÓN TABLET (width entre 576 y 1023px)*********/
 @media (min-width: 576px) and (max-width: 1023px) {
   /*-----HEADER-----*/
-  header .nav-ul {
+  .nav-ul {
     padding: 0;
     margin: auto; }
-    header .nav-ul .item-navegacion {
+    .nav-ul .item-navegacion {
+      font-size: 0.85rem;
       padding: 0.5rem 0.1rem;
       margin: 0.4rem auto; }
+  /*-----HTML INDEX-----*/
+  .nosotros-flex {
+    display: flex;
+    flex-direction: column; }
   /*-----HTML CONOCENOS-----*/
   .conteiner-conocenos {
     display: grid;
-    grid-template-areas: "quienes-somos quienes-somos"
- "media media"
- "mision vision"
- "valores valores ";
+    grid-template-areas: "quienes-somos quienes-somos" "media media" "mision vision" "valores valores ";
     grid-template-columns: repeat 1fr;
     grid-template-rows: auto auto auto;
     gap: 1rem;
@@ -360,30 +531,23 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
     text-align: center; }
-  fieldset {
-    font-size: 0.9rem;
-    display: grid;
-    grid-template-areas: "nombre"
- "apellido"
- "correo"
- "telefono"
- "localidad"
- "asunto"
- "mensaje"
- "enviar";
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
-    gap: 1rem; }
+    .conteiner-contacto fieldset {
+      font-size: 0.9rem;
+      display: grid;
+      grid-template-areas: "nombre" "apellido" "correo" "telefono" "localidad" "asunto" "mensaje" "enviar";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
+      gap: 1rem; }
   /*-----FOOTER-----*/
   footer {
     display: grid;
-    grid-template-areas: "logo-footer contacto-footer"
- "logo-footer redes-footer "
- "copyright-footer copyright-footer";
+    grid-template-areas: "logo-footer contacto-footer" "logo-footer redes-footer " "copyright-footer copyright-footer";
     grid-template-columns: 1fr 1.5fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     padding-top: 1rem;
-    background-color: #242729; }
+    background-color: #bf947d;
+    row-gap: 1.5rem;
+    height: 20rem; }
     footer .box-footer {
       display: flex;
       justify-content: center;
@@ -397,9 +561,7 @@ footer {
   /*-----HEADER-----*/
   .body-areas {
     display: grid;
-    grid-template-areas: "cabeza"
- "cuerpo"
- "pie";
+    grid-template-areas: "cabeza" "cuerpo" "pie";
     grid-template-rows: auto auto 8rem; }
   body {
     font-size: 12px; }
@@ -426,10 +588,7 @@ footer {
   /*-----HTML CONOCENOS-----*/
   .conteiner-conocenos {
     display: grid;
-    grid-template-areas: "quienes-somos quienes-somos"
- "media media"
- "mision vision"
- "valores valores ";
+    grid-template-areas: "quienes-somos quienes-somos" "media media" "mision vision" "valores valores ";
     grid-template-columns: repeat 1fr;
     grid-template-rows: auto auto auto;
     gap: 1rem;
@@ -445,30 +604,24 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 1fr;
     text-align: center; }
-  fieldset {
-    font-size: 0.9rem;
-    display: grid;
-    grid-template-areas: "nombre"
- "apellido"
- "correo"
- "telefono"
- "localidad"
- "asunto"
- "mensaje"
- "enviar";
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
-    gap: 1rem; }
+    .conteiner-contacto fieldset {
+      font-size: 0.9rem;
+      display: grid;
+      grid-template-areas: "nombre" "apellido" "correo" "telefono" "localidad" "asunto" "mensaje" "enviar";
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
+      gap: 1rem; }
+    .conteiner-contacto label {
+      width: 50%; }
   /*-----FOOTER-----*/
   footer {
     display: grid;
-    grid-template-areas: "logo-footer mobile-footer"
- "copyright-footer  copyright-footer ";
+    grid-template-areas: "logo-footer mobile-footer" "copyright-footer  copyright-footer ";
     grid-template-columns: 1.2fr 1fr;
     grid-template-rows: 2fr 1fr;
-    gap: 0.5rem;
     padding-top: 0.5rem;
-    background-color: #242729; }
+    background-color: #bf947d;
+    row-gap: 1rem; }
     footer .links-footer {
       display: none; }
     footer .contacto-footer {
@@ -488,4 +641,8 @@ footer {
       width: 30px;
       height: 30px;
       margin: 0 1rem;
-      vertical-align: middle; } }
+      vertical-align: middle; }
+    footer .copyright-footer {
+      font-size: 0.8rem; }
+      footer .copyright-footer span {
+        display: none; } }

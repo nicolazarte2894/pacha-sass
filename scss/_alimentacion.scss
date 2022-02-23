@@ -1,0 +1,26 @@
+/****************
+---ALIMENTACION---
+*****************/
+@import "variables";
+.media-alimentacion{
+    text-align: center;
+    height: 15rem;
+    background-color: rgb(228, 222, 222);
+  }
+.tips{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
+        div{
+        height: 8rem;
+        padding: 1rem;
+        border: none;
+        border-radius: 10px;
+        background-color:rgb(221, 226, 230);
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+}

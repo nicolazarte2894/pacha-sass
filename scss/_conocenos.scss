@@ -1,0 +1,44 @@
+/**************
+---CONOCENOS---
+***************/
+@import "variables";
+
+.conteiner-conocenos{
+    .quienes-somos, .mision, .vision, .valores, .media-conocenos{
+        padding: 1rem;
+        border: none;
+        border-radius: 10px;
+        background-color:rgb(221, 226, 230);
+    }
+    .media-conocenos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 17rem;
+            border-radius: 0.8rem;
+        }
+        .valores{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            div{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.contacto-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 2rem;
+    /*Mapa iframe*/
+    .mapa iframe{
+    width: 100%;
+    height: 20rem;
+    }
+}
+  

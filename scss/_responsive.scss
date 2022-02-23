@@ -5,17 +5,21 @@
 
 /********VERSIÓN TABLET (width entre 576 y 1023px)*********/
 @media (min-width: 576px) and (max-width:1023px){
-
     /*-----HEADER-----*/
-    header{
-        .nav-ul{
-            padding: 0;
-            margin:auto;
-            .item-navegacion{
-                padding: 0.5rem 0.1rem;
-                margin: 0.4rem auto;
-            }
+    .nav-ul{
+        padding: 0;
+        margin: auto;
+        .item-navegacion{
+            font-size: 0.85rem;
+            padding: 0.5rem 0.1rem;
+            margin: 0.4rem auto;
         }
+        
+    }
+    /*-----HTML INDEX-----*/
+    .nosotros-flex{
+        display: flex;
+        flex-direction: column;
     }
     /*-----HTML CONOCENOS-----*/
     .conteiner-conocenos{
@@ -43,25 +47,24 @@
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 1fr;
         text-align: center;
-    }
-    fieldset{
-        font-size: 0.9rem;
-        display: grid;
-        grid-template-areas: 
-        "nombre"
-        "apellido"
-        "correo"
-        "telefono"
-        "localidad"
-        "asunto"
-        "mensaje"
-        "enviar"
-        ;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
-        gap: 1rem;
-    }
-    
+        fieldset{
+            font-size: 0.9rem;
+            display: grid;
+            grid-template-areas: 
+            "nombre"
+            "apellido"
+            "correo"
+            "telefono"
+            "localidad"
+            "asunto"
+            "mensaje"
+            "enviar"
+            ;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
+            gap: 1rem;
+        }
+    }   
     /*-----FOOTER-----*/
     footer{
         display: grid;
@@ -71,9 +74,11 @@
         "copyright-footer copyright-footer"
         ;
         grid-template-columns: 1fr 1.5fr;
-        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         padding-top: 1rem;
-        background-color:rgb(36, 39, 41);
+        background-color: $gradiente-footer1;
+        row-gap: 1.5rem;
+        height: 20rem;
     
     .box-footer{
         display: flex;
@@ -148,7 +153,7 @@
         gap: 1rem;
         margin: auto 1rem;
         height: fit-content;
-        }
+    }
     /*-----HTML PRODUCTOS-----*/
     .barra-productos{
     display: flex;
@@ -160,7 +165,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 1fr;
         text-align: center;
-    }
+    
     fieldset{
         font-size: 0.9rem;
         display: grid;
@@ -177,6 +182,10 @@
         grid-template-columns: 1fr;
         grid-template-rows: repeat(1fr) 1.5fr 2fr 1fr;
         gap: 1rem;
+        }
+        label{
+            width: 50%;
+        }
     }
     /*-----FOOTER-----*/
     footer{
@@ -187,10 +196,9 @@
         ;
         grid-template-columns: 1.2fr 1fr;
         grid-template-rows: 2fr 1fr;
-        gap: 0.5rem;
         padding-top: 0.5rem;
-        background-color:rgb(36, 39, 41);
-        
+        background-color:$gradiente-footer1;
+        row-gap: 1rem;
         .links-footer{
             display: none;
         }
@@ -217,6 +225,12 @@
             height: 30px;
             margin: 0 1rem;
             vertical-align: middle;
+        }
+        .copyright-footer{
+            font-size: 0.8rem;
+            span{
+                display: none;
+            }
         }
     }
 }

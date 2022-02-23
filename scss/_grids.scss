@@ -9,7 +9,7 @@
     "cuerpo"
     "pie"
     ;
-    grid-template-rows: auto auto 15rem;
+    grid-template-rows: auto auto 18rem;
     /*Nombre areas footer*/
     header{
     grid-area: cabeza;
@@ -52,49 +52,50 @@
     }
 }
 
-/*Formulario*/
-fieldset{
-    font-size: 0.9rem;
-    display: grid;
-    grid-template-areas: 
-    "nombre apellido"
-    "correo telefono"
-    "localidad localidad"
-    "asunto asunto"
-    "mensaje mensaje"
-    "enviar enviar"
-    ;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
-    gap: 1rem;
+.conteiner-contacto{
+    /*Formulario*/
+    fieldset{
+        font-size: 0.9rem;
+        display: grid;
+        grid-template-areas: 
+        "nombre apellido"
+        "correo telefono"
+        "localidad localidad"
+        "asunto asunto"
+        "mensaje mensaje"
+        "enviar enviar"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
+        gap: 1rem;
 
-    /*Nombre Areas Formulario*/
-    .nombre-grid{
-        grid-area: nombre;
-    }
-    .apellido-grid{
-        grid-area: apellido;
-    }
-    .correo-grid{
-        grid-area: correo;
-    }
-    .telefono-grid{
-        grid-area: telefono;
-    }
-    .localidad-grid{
-        grid-area: localidad;
-    }
-    .asunto-grid{
-        grid-area: asunto;
-    }
-    .mensaje-grid{
-        grid-area: mensaje;
-    }
-    .enviar-grid{
-        grid-area: enviar;
+        /*Nombre Areas Formulario*/
+        .nombre-grid{
+            grid-area: nombre;
+        }
+        .apellido-grid{
+            grid-area: apellido;
+        }
+        .correo-grid{
+            grid-area: correo;
+        }
+        .telefono-grid{
+            grid-area: telefono;
+        }
+        .localidad-grid{
+            grid-area: localidad;
+        }
+        .asunto-grid{
+            grid-area: asunto;
+        }
+        .mensaje-grid{
+            grid-area: mensaje;
+        }
+        .enviar-grid{
+            grid-area: enviar;
+        }
     }
 }
-
 /*-----FOOTER-----*/
 
 footer{
@@ -105,9 +106,9 @@ footer{
     ;
     grid-template-columns: 1.2fr 1fr 1fr 1fr;
     grid-template-rows: 2fr 1fr;
-    gap: 1rem;
-    padding-top: 2rem;
-    background-color:rgb(36, 39, 41);
+    row-gap: 2rem;
+    padding-top: 1rem;
+    background-color: $gris1;
     
     /*Nombre areas footer*/
     .logo-footer{

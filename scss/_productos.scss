@@ -1,0 +1,53 @@
+/**************
+---PRODUCTOS---
+***************/
+@import "variables";
+.container-barras{
+    background-image: url(../assets/img/barras2.jpg);
+    background-size: cover;
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //box-shadow: 5px 5px 10px rgba(50, 50, 51, 0.2);
+    h4{
+        font-size: xx-large;
+        color: $blanco2;
+        //text-shadow: 2px 2px 2px rgb(21, 21, 22, 0.8);
+    }
+}
+.container-granola{
+    background-image: url(../assets/img/granola.jpg);
+    background-size: cover;
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //box-shadow: 5px 5px 10px rgba(50, 50, 51, 0.2);
+    h4{
+        font-size: xx-large;
+        color: $blanco2;
+        //text-shadow: 2px 2px 2px rgb(21, 21, 22, 0.8);
+    }
+    p{
+        font-size: large;
+        color: $blanco2;
+        //text-shadow: 2px 2px 2px rgb(21, 21, 22, 0.8);
+    }
+}
+.card{
+    transition: all 0.5s;
+    &:hover{
+        transform: translateX(2px);
+        transform: translateY(2px);
+        //box-shadow: 2px 2px 20px rgb(36, 39, 41,0.5);
+        transition:all 0.5s;
+    }
+}
