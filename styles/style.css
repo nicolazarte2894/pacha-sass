@@ -198,7 +198,7 @@ main {
     align-items: center;
     margin: 2rem auto;
     text-transform: uppercase; }
-  main h3 {
+  main h2, main h3, main h4, main h5, main h6 {
     text-align: center; }
   main a img {
     vertical-align: middle; }
@@ -253,7 +253,8 @@ main {
     justify-content: center;
     align-items: center;
     height: fit-content;
-    margin: auto; }
+    margin: auto;
+    background-color: #dde2e6; }
     .main-index .nosotros-flex div {
       width: 100%;
       height: 100%;
@@ -265,8 +266,8 @@ main {
       height: 20rem; }
     .main-index .nosotros-flex p {
       color: #242729;
-      font-weight: bold;
-      height: 100%; }
+      height: 100%;
+      text-align: justify; }
 
 /**************
 ---CONOCENOS---
@@ -317,7 +318,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .container-barras h4 {
+  .container-barras h3 {
     font-size: xx-large;
     color: whitesmoke; }
 
@@ -332,7 +333,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-  .container-granola h4 {
+  .container-granola h3 {
     font-size: xx-large;
     color: whitesmoke; }
   .container-granola p {
@@ -413,7 +414,8 @@ fieldset {
     color: whitesmoke;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    font-size: 1rem; }
   fieldset div {
     height: auto;
     width: 100%;
