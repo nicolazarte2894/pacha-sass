@@ -26,7 +26,7 @@ body {
 .body-areas {
   display: grid;
   grid-template-areas: "cabeza" "cuerpo" "pie";
-  grid-template-rows: auto auto 18rem;
+  grid-template-rows: auto auto 20rem;
   /*Nombre areas footer*/ }
   .body-areas header {
     grid-area: cabeza; }
@@ -115,27 +115,25 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #bc6f03;
-  background-image: linear-gradient(315deg, #bc6f03 10%, #874000 74%); }
-  header div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%; }
-    header div .logo {
-      display: block;
-      width: fit-content;
-      text-align: center;
-      margin: 1rem 0; }
-      header div .logo img {
-        display: block;
-        margin: 0 auto;
-        width: 100px;
-        height: 100px;
-        width: fit-content; }
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+  header .logo {
+    width: fit-content;
+    text-align: center;
+    margin: 0.5rem 3rem; }
+    header .logo img {
+      margin: 0 auto;
+      width: 90px;
+      height: 90px; }
+  header .menu-icon {
+    color: white; }
   header nav {
-    background-color: #242729; }
+    display: flex;
+    justify-content: space-around;
+    background-color: #242729 10%; }
     header nav .nav-ul {
       width: 100%;
       margin: auto;
@@ -147,9 +145,8 @@ header {
       header nav .nav-ul .item-navegacion {
         display: block;
         color: white;
-        text-transform: uppercase;
-        font-size: 1rem;
-        font-weight: bold;
+        font-size: 1.05rem;
+        font-weight: normal;
         height: 100%;
         text-align: center;
         padding: 0.5rem 0.8rem;
@@ -166,6 +163,14 @@ header {
           transition: all 0.8s;
           padding: 0.5rem 0.8rem;
           border-radius: 1.3rem; }
+  header .icon-header {
+    margin: 1rem 1rem;
+    color: white;
+    font-size: 25px; }
+
+.menu-fijo {
+  background-color: #242729;
+  transition: all 0.2s ease-in-out; }
 
 /*************
 -----MAIN-----
@@ -177,18 +182,29 @@ main {
   main p {
     padding: 2rem 5rem;
     text-align: center; }
+  main .carousel-item {
+    position: relative; }
+    main .carousel-item p {
+      width: 80%;
+      padding: 1rem 1rem;
+      color: white;
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
   main .titulo-principal {
     width: 100%;
-    height: 7rem;
-    background-color: #f0e9e9;
+    height: 12rem;
+    background-color: #0e0d0d;
     display: flex;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    color: #bd5816;
+    color: whitesmoke;
     font-style: italic;
-    font-size: large;
-    margin-bottom: 2rem; }
+    font-size: large; }
   main .titulos {
     width: 100%;
     height: 5rem;
@@ -197,6 +213,7 @@ main {
     justify-content: center;
     align-items: center;
     margin: 2rem auto;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.5);
     text-transform: uppercase; }
   main h2, main h3, main h4, main h5, main h6 {
     text-align: center; }
@@ -222,32 +239,27 @@ main {
 ***************/
 /*Variables del proyecto*/
 .main-index {
-  background-image: url("../assets/img/barras1.jpg");
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center; }
   .main-index .carrusel {
     width: 100%;
-    height: 30rem;
+    height: 35rem;
     padding: 5rem auto;
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: whitesmoke; }
     .main-index .carrusel div {
       width: 100%;
       height: 95%; }
-      .main-index .carrusel div img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center; }
+      .main-index .carrusel div .carousel-item {
+        height: 100%; }
+        .main-index .carrusel div .carousel-item img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center; }
   .main-index .nosotros-flex {
     display: flex;
     justify-content: center;
@@ -286,13 +298,24 @@ main {
   .conteiner-conocenos .media-conocenos img {
     height: 17rem;
     border-radius: 0.8rem; }
-  .conteiner-conocenos .media-conocenos .valores {
+
+.conteiner-conocenos .valores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .conteiner-conocenos .valores .valores-items {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .conteiner-conocenos .media-conocenos .valores div {
-      width: 100%;
-      text-align: center; }
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-weight: bold; }
+    .conteiner-conocenos .valores .valores-items div {
+      padding: 1rem 1rem;
+      background-color: #242729;
+      color: whitesmoke;
+      border-radius: 15px; }
 
 .contacto-main {
   display: flex;
@@ -317,10 +340,12 @@ main {
   height: 20rem;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5); }
   .container-barras h3 {
     font-size: xx-large;
-    color: whitesmoke; }
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); }
 
 .container-granola {
   background-image: url(../assets/img/granola.jpg);
@@ -332,43 +357,48 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5); }
   .container-granola h3 {
     font-size: xx-large;
-    color: whitesmoke; }
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); }
   .container-granola p {
     font-size: large;
-    color: whitesmoke; }
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); }
 
 .card {
   transition: all 0.5s; }
   .card:hover {
     transform: translateX(2px);
     transform: translateY(2px);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     transition: all 0.5s; }
+
+div {
+  text-align: center; }
 
 /****************
 ---ALIMENTACION---
 *****************/
 /*Variables del proyecto*/
-.media-alimentacion {
-  text-align: center;
-  height: 15rem;
-  background-color: #e4dede; }
-
 .tips {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   height: fit-content; }
   .tips div {
-    height: 8rem;
+    height: 100%;
+    width: 100%;
     padding: 1rem;
     border: none;
     border-radius: 10px;
     background-color: #dde2e6;
     width: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; }
 
@@ -391,10 +421,6 @@ main {
     list-style: none;
     color: #242729;
     cursor: pointer; }
-    .contacto-main a img {
-      width: 20px;
-      height: 20px;
-      cursor: pointer; }
   .contacto-main .mapa iframe {
     width: 100%;
     height: 20rem; }
@@ -460,6 +486,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center; }
+    footer .logo-footer img {
+      width: 85px;
+      height: 85px; }
   footer .box-footer {
     display: flex;
     flex-direction: column;
@@ -491,8 +520,14 @@ footer {
     align-items: center;
     text-align: center;
     width: 100%; }
-  footer a img {
+    footer .copyright-footer a {
+      vertical-align: middle; }
+      footer .copyright-footer a i {
+        color: #0e76a8; }
+  footer a {
     vertical-align: middle; }
+    footer a i {
+      color: black; }
   footer .mobile-footer {
     display: none; }
 
@@ -510,6 +545,12 @@ footer {
       font-size: 0.85rem;
       padding: 0.5rem 0.1rem;
       margin: 0.4rem auto; }
+  /*-----MAIN-----*/
+  main .carousel-item p {
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
+  .icon-header {
+    display: none; }
   /*-----HTML INDEX-----*/
   .nosotros-flex {
     display: flex;
@@ -560,21 +601,25 @@ footer {
 
 /********VERSIÓN MOBILE (width<575px)*********/
 @media (max-width: 575px) {
-  /*-----HEADER-----*/
   .body-areas {
     display: grid;
     grid-template-areas: "cabeza" "cuerpo" "pie";
     grid-template-rows: auto auto 8rem; }
   body {
     font-size: 12px; }
-  header h1 {
+  /*-----HEADER-----*/
+  header .logo img {
+    width: 70px;
+    height: 70px; }
+  header .icon-header {
     display: none; }
-  .item-navegacion {
+  header .item-navegacion {
     font-size: 0.8rem;
     margin: auto;
     margin: 0.4rem 0; }
-    .item-navegacion:hover {
+    header .item-navegacion:hover {
       font-size: 0.85rem; }
+  /*-----INDEX*-----*/
   .nosotros-flex {
     display: flex;
     flex-direction: column; }
@@ -587,6 +632,9 @@ footer {
     height: 3rem; }
   main h2 {
     font-size: 2rem; }
+  main .carousel-item p {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); }
   /*-----HTML CONOCENOS-----*/
   .conteiner-conocenos {
     display: grid;
@@ -632,18 +680,17 @@ footer {
       display: none; }
     footer .mobile-footer {
       display: block; }
-    footer .logo-footer a img {
+    footer .logo-footer img {
       width: 70px;
       height: 70px; }
     footer .mobile-footer {
       display: flex;
       justify-content: center;
       align-items: center; }
-    footer .mobile-footer .icon-footer {
-      width: 30px;
-      height: 30px;
+    footer .mobile-footer a i {
       margin: 0 1rem;
-      vertical-align: middle; }
+      vertical-align: middle;
+      color: #242729; }
     footer .copyright-footer {
       font-size: 0.8rem; }
       footer .copyright-footer span {

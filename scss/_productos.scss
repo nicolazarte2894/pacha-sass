@@ -12,11 +12,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    //box-shadow: 5px 5px 10px rgba(50, 50, 51, 0.2);
+    box-shadow: 2px 5px 10px $sombra;
     h3{
         font-size: xx-large;
         color: $blanco2;
-        //text-shadow: 2px 2px 2px rgb(21, 21, 22, 0.8);
+        text-shadow: 2px 2px 2px $sombra;
     }
 }
 .container-granola{
@@ -30,16 +30,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    //box-shadow: 5px 5px 10px rgba(50, 50, 51, 0.2);
+    box-shadow: 2px 5px 10px $sombra;
     h3{
         font-size: xx-large;
         color: $blanco2;
-        //text-shadow: 2px 2px 2px rgb(21, 21, 22, 0.8);
+        text-shadow: 2px 2px 2px $sombra;
     }
     p{
         font-size: large;
         color: $blanco2;
-        //text-shadow: 2px 2px 2px rgb(21, 21, 22, 0.8);
+        text-shadow: 2px 2px 2px $sombra;
     }
 }
 .card{
@@ -47,7 +47,10 @@
     &:hover{
         transform: translateX(2px);
         transform: translateY(2px);
-        //box-shadow: 2px 2px 20px rgb(36, 39, 41,0.5);
+        box-shadow: 2px 2px 10px $sombra;
         transition:all 0.5s;
     }
+}
+div{
+    text-align: center;
 }

@@ -18,13 +18,24 @@
             height: 17rem;
             border-radius: 0.8rem;
         }
-        .valores{
+    }
+    .valores{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+        .valores-items{
+            width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
+            flex-direction: row;
+            font-weight: bold;
             div{
-                width: 100%;
-                text-align: center;
+                padding: 1rem 1rem;
+                background-color: $gris1;
+                color: $blanco2;
+                border-radius: 15px;
             }
         }
     }

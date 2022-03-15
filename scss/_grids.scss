@@ -9,7 +9,7 @@
     "cuerpo"
     "pie"
     ;
-    grid-template-rows: auto auto 18rem;
+    grid-template-rows: auto auto 20rem;
     /*Nombre areas footer*/
     header{
     grid-area: cabeza;
@@ -68,7 +68,6 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 2fr;
         gap: 1rem;
-
         /*Nombre Areas Formulario*/
         .nombre-grid{
             grid-area: nombre;

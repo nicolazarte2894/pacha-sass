@@ -11,6 +11,10 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
+        img{
+            width: $logo-footer;
+            height: $logo-footer;
+        }
     }
     .box-footer{
         display: flex;
@@ -50,10 +54,17 @@ footer{
         align-items: center;
         text-align: center;
         width: 100%;
+        a{
+            vertical-align: middle;
+            i{
+                color: $linkedin;
+            }
+        }
     }
     a{
-        img{
-            vertical-align: middle;
+        vertical-align: middle;
+        i{
+            color: black;
         }
     }
     .mobile-footer{

@@ -12,30 +12,28 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $gradiente-header1;
-    background-image: linear-gradient(315deg, $gradiente-header1 10%, $gradiente-header2 74%);
-    div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        .logo {
-            display: block;
-            width: fit-content;
-            text-align: center;
-            margin: 1rem 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: $sombra;
+    .logo {
+        width: fit-content;
+        text-align: center;
+        margin: 0.5rem 3rem;
             img{
-                display: block;
                 margin: 0 auto;
                 width: $logo-header;
                 height: $logo-header;
-                width: fit-content;
             }
-        }
+    }
+    .menu-icon{
+        color: $blanco1;
     }
     nav{
-        background-color: $gris1;
+        display: flex;
+        justify-content: space-around;
+        background-color: $gris1 10%;
         .nav-ul{
             width: 100%; 
             margin: auto;
@@ -47,9 +45,8 @@ header{
             .item-navegacion {
                 display: block;
                 color: $blanco1;
-                text-transform: uppercase;
-                font-size: 1rem;
-                font-weight: bold;
+                font-size: 1.05rem;
+                font-weight: normal;
                 height: 100%;
                 text-align: center;
                 padding: 0.5rem 0.8rem;
@@ -70,5 +67,14 @@ header{
             }
         }
     }
-}  
+    .icon-header{
+        margin: 1rem 1rem;
+        color: $blanco1;
+        font-size: 25px;
+    }
+}
 
+.menu-fijo{
+    background-color: $gris1;
+    transition: all 0.2s ease-in-out;
+}

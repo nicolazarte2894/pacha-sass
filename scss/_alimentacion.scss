@@ -2,24 +2,23 @@
 ---ALIMENTACION---
 *****************/
 @import "variables";
-.media-alimentacion{
-    text-align: center;
-    height: 15rem;
-    background-color: rgb(228, 222, 222);
-  }
+
 .tips{
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     height: fit-content;
         div{
-        height: 8rem;
+        height: 100%;
+        width: 100%;
         padding: 1rem;
         border: none;
         border-radius: 10px;
         background-color:rgb(221, 226, 230);
         width: auto;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         }

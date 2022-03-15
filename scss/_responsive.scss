@@ -16,6 +16,18 @@
         }
         
     }
+    /*-----MAIN-----*/
+    main{
+        .carousel-item{
+            p{
+                font-size: 2rem;
+                text-shadow: 2px 2px 5px $sombra;
+            }
+        }
+    }
+    .icon-header{
+        display: none;
+    }
     /*-----HTML INDEX-----*/
     .nosotros-flex{
         display: flex;
@@ -94,7 +106,7 @@
 
 /********VERSIÓN MOBILE (width<575px)*********/
 @media (max-width: 575px){
-    /*-----HEADER-----*/
+    
     .body-areas{
         display: grid;
         grid-template-areas:
@@ -107,23 +119,33 @@
     body{
         font-size: 12px;
     }
-    header {
-        h1{
+    /*-----HEADER-----*/
+    header{
+        .logo {
+                img{
+                    width: $logo-header-mb;
+                    height: $logo-header-mb;
+                }
+        }
+        .icon-header{
             display: none;
         }
-    }
-    .item-navegacion{
-        font-size: 0.8rem;
-        margin: auto;
-        margin: 0.4rem 0;
-        &:hover{
-            font-size: 0.85rem;
+        .item-navegacion{
+            font-size: 0.8rem;
+            margin: auto;
+            margin: 0.4rem 0;
+            &:hover{
+                font-size: 0.85rem;
+            }
         }
     }
+
+    /*-----INDEX*-----*/
     .nosotros-flex{
         display: flex;
         flex-direction: column;
     }
+    
     /*-----MAIN-----*/ 
     main{
         .titulo-principal{
@@ -136,6 +158,12 @@
         }
         h2{
             font-size: 2rem;
+        }
+        .carousel-item{
+            p{
+                font-size: 1.5rem;
+                text-shadow: 2px 2px 5px $sombra;
+            }
         }
     }
     
@@ -211,20 +239,25 @@
         .mobile-footer{
             display: block;
         }
-        .logo-footer a img{
-            width: 70px;
-            height: 70px;
+        .logo-footer{
+            img{
+                width: $logo-footer-mb;
+                height: $logo-footer-mb;
+            }
         }
         .mobile-footer{
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .mobile-footer .icon-footer{
-            width: 30px;
-            height: 30px;
-            margin: 0 1rem;
-            vertical-align: middle;
+        .mobile-footer{
+            a{
+                i{
+                margin: 0 1rem;
+                vertical-align: middle;
+                color: $gris1;
+            }
+            }
         }
         .copyright-footer{
             font-size: 0.8rem;
